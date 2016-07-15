@@ -13,6 +13,10 @@ LDFLAGS=-T$(LD_SCRIPT)
 # AS / NASM
 ASFLAGS=-felf
 
+#GCC
+CFLAGS=-I $(BASE_DIR)/include
+#-nostdlib -ffreestanding -nostdinc -g
+
 #C Library
 CLIB_PREFIX=~/opt/cross/bin
 CC=i686-elf-gcc
@@ -49,3 +53,11 @@ link:
 
 .s.o:
 	nasm $(ASFLAGS) $<
+
+.PHONY: clean
+clean:
+	@echo "[*] Cleaning"
+	@rm -f *.o
+	@for c in $(DIRECTORY); do\
+		$(MAKE) --no-print-directory -C $$c clean;\
+	done;\
