@@ -14,8 +14,8 @@ LDFLAGS=-T$(LD_SCRIPT)
 ASFLAGS=-felf
 
 #GCC
-CFLAGS=-I $(BASE_DIR)/include
-#-nostdlib -ffreestanding -nostdinc -g
+CFLAGS=-I $(BASE_DIR)/include -ffreestanding
+#-nostdlib -nostdinc -g
 
 #C Library
 CLIB_PREFIX=~/opt/cross/bin
