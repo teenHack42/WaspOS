@@ -7,7 +7,7 @@ BASE_DIR=~/WaspOS
 BUILD_DIR=$(BASE_DIR)/build
 
 # LD
-LD_SCRIPT=link.ld
+LD_SCRIPT=link.ld -arch=i386
 LDFLAGS=-T$(LD_SCRIPT)
 
 # AS / NASM
