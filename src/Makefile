@@ -19,8 +19,10 @@ CFLAGS=-I $(BASE_DIR)/include -ffreestanding
 
 #C Library
 CLIB_PREFIX=~/opt/cross/bin
-CC=i686-elf-gcc
-LD=i686-elf-ld
+#CC=i686-elf-gcc
+#LD=i686-elf-ld
+CC=gcc
+LD=ld
 
 # Directory
 DIRECTORY := $(sort $(dir $(wildcard ./*/)))
