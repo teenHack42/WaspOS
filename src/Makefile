@@ -11,7 +11,7 @@ LD_SCRIPT=link.ld -arch=i386 -melf_i386
 LDFLAGS=-T$(LD_SCRIPT)
 
 # AS / NASM
-ASFLAGS=-felf
+ASFLAGS=-felf32
 
 #GCC
 CFLAGS=-I $(BASE_DIR)/include -ffreestanding -m32
