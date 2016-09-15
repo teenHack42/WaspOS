@@ -7,14 +7,14 @@ BASE_DIR=~/WaspOS
 BUILD_DIR=$(BASE_DIR)/build
 
 # LD
-LD_SCRIPT=link.ld -arch=i386
+LD_SCRIPT=link.ld -arch=i386 -melf_i386
 LDFLAGS=-T$(LD_SCRIPT)
 
 # AS / NASM
 ASFLAGS=-felf
 
 #GCC
-CFLAGS=-I $(BASE_DIR)/include -ffreestanding
+CFLAGS=-I $(BASE_DIR)/include -ffreestanding -m32
 #-nostdlib -nostdinc -g
 
 #C Library
