@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <gdt.h>
 #include <io.h>
+#include <drivers/keyboard.h>
 int wasp_kernel_main(){
 	clear_screen();
 	printf( "Welcome to Wasp OS\n" );
@@ -13,5 +14,8 @@ int wasp_kernel_main(){
 	} else {
 		printf("IRQ's not enabled!\n");
 	}
+
+	initKeboard();
+
 	printf("Done");
 }
