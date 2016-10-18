@@ -1,7 +1,8 @@
-#include "stdio.h"
-#include "stdarg.h"
-#include "stdint-gcc.h"
-#include "initScreenFunc.h"
+#include <stdio.h>
+#include <stdarg.h>
+#include <stdint.h>
+#include <stddef.h>
+#include <initScreenFunc.h>
 
 uint8_t defcolour = 0x0A;
 
@@ -53,4 +54,8 @@ int printf( const char* format, ... ) {
 		va_end(argp);
 		//return the number of characters printed if successful else negative
 		return prntdChars;
+}
+
+void *memset(void *str, int c, size_t n) {
+
 }
